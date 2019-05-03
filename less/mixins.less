@@ -10,12 +10,17 @@
     padding: @top @right @bottom @left;
 }
 
-.btn{
+.button(@bgColor, @fontSize, @textColor){
     border-radius: 0.5rem;
     width: 12rem;
-    background-color: @button-bg;
+    // background-color: @button-bg;
+    background-color: @bgColor;
     .padding-styles(1rem, 1rem, 1rem, 1rem);
     text-align: center;
-    font-size: @buttonFontSize;
-    color: @white;
+    font-size: @fontSize;
+    // font-size: @buttonFontSize;
+    color: @textColor;
+    @media @phone {
+        width: 100%;
+      }
 }

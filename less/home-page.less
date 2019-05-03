@@ -1,5 +1,4 @@
 // Home Content
-
 .nav-section {
   .flex-style(center, center, row);
   .nav-content {
@@ -10,6 +9,13 @@
     color: @nav-font;
     border: @nav-border;
     .padding-styles(0, 2rem, 0, 2rem);
+    @media @phone {
+      .padding-styles(0, 0, 0, 0);
+      font-size: 3rem;
+    }
+    @media @tablet {
+      padding: 0 2rem;
+    }
   }
 }
 
@@ -32,6 +38,10 @@
 
     p {
       padding:0 15px;
+    }
+    
+    @media @phone {
+      width: 100%;
     }
   
   }
@@ -85,20 +95,39 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
+      @media @phone {
+        width: 100%;
+        .padding-styles(15px, 0, 0, 0);
       }
+      .btn {
+        .button(@btn-bg-color, @buttonFontSize, @white);
+        &:hover {
+          .button(@button-bg, @buttonFontSize, @white);
+        }
+      }
+
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+    }
+    
+    @media @phone {
+      .flex-style(center, center, column-reverse);
+      width: 100%;
+      .padding-styles(15px, 15px, 15px, 15px);
+      margin-top: 1rem;
     }
   }
 }// home
