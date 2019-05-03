@@ -1,6 +1,7 @@
 // Home Content
 .nav-section {
   .flex-style(center, center, row);
+  margin-top: 4rem;
   .nav-content {
     .flex-style(space-between, center, column);
     width: 100%;
@@ -9,13 +10,18 @@
     color: @nav-font;
     border: @nav-border;
     .padding-styles(0, 2rem, 0, 2rem);
+    position: fixed;
     @media @phone {
       .padding-styles(0, 0, 0, 0);
       font-size: 3rem;
+      margin-top: 1rem;
     }
     @media @tablet {
       padding: 0 2rem;
     }
+  }
+  @media @phone {
+    margin-top: 2rem;
   }
 }
 
