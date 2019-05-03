@@ -194,12 +194,21 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  width: 58%;
+  width: 100%;
   font-size: 5rem;
   background-color: #F6F6F6;
   color: #454A59;
   border: #F1F1F1;
   padding: 0 2rem 0 2rem;
+}
+.home .intro #cover-image {
+  background: #fff url('../img/main-header.png') center center no-repeat;
+  color: white;
+  height: 25vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0 1.4rem 0 1.4rem;
 }
 .home .intro h2 {
   padding: 15px;

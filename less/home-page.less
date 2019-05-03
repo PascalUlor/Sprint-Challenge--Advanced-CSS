@@ -4,7 +4,7 @@
   .flex-style(center, center, row);
   .nav-content {
     .flex-style(space-between, center, column);
-    width: 58%;
+    width: 100%;
     font-size: 5rem;
     background-color: @nav-bg;
     color: @nav-font;
@@ -16,6 +16,15 @@
 .home {
 
   .intro {
+    #cover-image {
+      background: #fff url('../img/main-header.png') center center no-repeat;
+      color: white;
+      height: 25vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      .padding-styles(0, 1.4rem, 0, 1.4rem);
+    }
 
     h2 {
       padding: 15px;
