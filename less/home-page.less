@@ -1,8 +1,60 @@
 // Home Content
+.nav-section {
+  .flex-style(center, center, row);
+  margin-top: 4rem;
+  opacity: 0.8;
+  .nav-content {
+    .flex-style(space-between, center, column);
+    width: 100%;
+    font-size: 5rem;
+    background-color: @nav-bg;
+    color: @nav-font;
+    border: @nav-border;
+    .padding-styles(0, 2rem, 0, 2rem);
+    position: fixed;
+    @media @phone {
+      .padding-styles(0, 0, 0, 0);
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+    @media @tablet {
+      padding: 0 2rem;
+    }
+  }
+  @media @phone {
+    margin-top: 2rem;
+  }
+}
+
+  /*Image animation*/
+  .img-zoom {
+    position: relative;
+    overflow: hidden;
+    &:hover img {
+      cursor: pointer;
+      transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
+    img {
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+  }
 
 .home {
 
   .intro {
+    #cover-image {
+      background: #fff url('../img/main-header.png') center center no-repeat;
+      color: white;
+      height: 25vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      .padding-styles(0, 1.4rem, 0, 1.4rem);
+    }
 
     h2 {
       padding: 15px;
@@ -10,6 +62,10 @@
 
     p {
       padding:0 15px;
+    }
+    
+    @media @phone {
+      width: 100%;
     }
   
   }
@@ -24,6 +80,13 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+          width: 100%;
+          &.sky, &.launch {
+            display: none;
+          }
+      }
     }
   }
 
@@ -56,20 +119,39 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
+      @media @phone {
+        width: 100%;
+        .padding-styles(15px, 0, 0, 0);
       }
+      .btn {
+        .button(@btn-bg-color, @buttonFontSize, @white);
+        &:hover {
+          .button(@button-bg, @buttonFontSize, @white);
+        }
+      }
+
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+    }
+    
+    @media @phone {
+      .flex-style(center, center, column-reverse);
+      width: 100%;
+      .padding-styles(15px, 15px, 15px, 15px);
+      margin-top: 1rem;
     }
   }
 }// home
