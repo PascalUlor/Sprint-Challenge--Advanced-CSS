@@ -196,6 +196,8 @@ footer {
   flex-direction: row;
   margin-top: 4rem;
   opacity: 0.8;
+  z-index: 1;
+  position: relative;
 }
 .nav-section .nav-content {
   display: flex;
@@ -209,6 +211,7 @@ footer {
   border: #F1F1F1;
   padding: 0 2rem 0 2rem;
   position: fixed;
+  z-index: 1;
 }
 @media (max-width: 500px) {
   .nav-section .nav-content {

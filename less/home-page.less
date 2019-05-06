@@ -3,6 +3,8 @@
   .flex-style(center, center, row);
   margin-top: 4rem;
   opacity: 0.8;
+  z-index: 1;
+  position: relative;
   .nav-content {
     .flex-style(space-between, center, column);
     width: 100%;
@@ -12,6 +14,7 @@
     border: @nav-border;
     .padding-styles(0, 2rem, 0, 2rem);
     position: fixed;
+    z-index: 1;
     @media @phone {
       .padding-styles(0, 0, 0, 0);
       font-size: 3rem;
